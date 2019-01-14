@@ -15,8 +15,9 @@ public class StudentController extends AbstractHandler implements HttpHandler {
     private static List<Student> students = new ArrayList<>();
 
     static {
-        students.add(new Student(1, "Jan", "Kowalski", 36));
-        students.add(new Student(2, "Piotr", "Bulwa", 12));
+        students.add(new Student(1, "Jan", "Kowalski", 20));
+        students.add(new Student(2, "Krzysztof", "Odoj", 120));
+        students.add(new Student(3, "Adam", "B", 1));
     }
 
     @Override
@@ -34,16 +35,6 @@ public class StudentController extends AbstractHandler implements HttpHandler {
         // "/students/add"
         else if (uriElements[2].equals("add")) {
             addStudent(httpExchange, method);
-        }
-
-        // "/students/edit/n"
-        else if (uriElements[2].equals("edit")) {
-            editStudent(uriElements);
-        }
-
-        // "/student/delete/n"
-        else if (uriElements[2].equals("delete")) {
-            deleteStudent(uriElements);
         }
     }
 
@@ -67,13 +58,5 @@ public class StudentController extends AbstractHandler implements HttpHandler {
 
             redirectToLocation(httpExchange, "/students");
         }
-    }
-
-    private void editStudent(String[] uriElements) {
-
-    }
-
-    private void deleteStudent(String[] uriElements) {
-
     }
 }

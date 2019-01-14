@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class SQLQueryHandler {
 
     private static SQLQueryHandler ourInstance;
-    private PostgreSQLJDBC connectionEstablisher;
+    private Connector connectionEstablisher;
     private Connection connection;
 
     public static SQLQueryHandler getInstance() {
@@ -19,7 +19,7 @@ public class SQLQueryHandler {
     }
 
     private SQLQueryHandler() {
-        this.connectionEstablisher = new PostgreSQLJDBC();
+        this.connectionEstablisher = new Connector();
         this.connection = connectionEstablisher.getConnection();
     }
 

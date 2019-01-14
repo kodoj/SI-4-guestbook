@@ -14,7 +14,7 @@ public class GuestbookAccessObject implements IDAO {
     @Override
     public List<GuestEntry> loadGuestbook() {
         try {
-            String query = "SELECT name, msg, date FROM guest_entry order by entry_id desc";
+            String query = "SELECT name, message, date FROM guest_entry order by entry_id desc;";
 
             ResultSet guestbookContent = SQLQueryHandler.getInstance().executeQuery(query);
 
