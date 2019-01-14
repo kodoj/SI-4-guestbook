@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Monwonatan">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <usermenu>
+        <h1>Hello {{name}}!</h1>
+        <form method="post">
+            <fieldset>
+                <legend>Your msg</legend>
+                <label><span>Nickname </span><input type="text" name="name" value="nickname"/></br></label>
+                <label><span>Message </span><input type="text" name="msg" value="message"/></br></label>
+                <label><input type="submit" value="Submit"></label>
+            </fieldset>
+        </form>
+
+        <button><a class="menu-option" href="/logout">Log out</a></button>
+    </usermenu>
+
+    <guestbook>
+        <ul>
+            {% for key, value in guestentry %}
+                    <li>{{ key }} </br> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </guestbook>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Monwonatan">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <guestbook>
+        {% for item in students %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.firstName }}</td>
+                <td>{{ item.lastName }}</td>
+                <td>{{ item.age }}</td>
+                <td><button><a class="menu-option" href="/students/edit/{{item.id}}">Edit</a></button></td></br>
+            </tr>
+        {% endfor %}
+    </guestbook>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+    background-color: grey;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+usermenu, guestbook {
+    width: 25%;
+    height: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-flow: column;
+    border: 2px solid black;
+    background: white;
+    padding: 5%;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+}
